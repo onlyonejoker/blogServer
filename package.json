@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.16"
+  },
+  "name": "bolg",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "serve": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.2"
+  }
+}
