@@ -1,7 +1,13 @@
 const express = require("express");
-const express = require("../../../../5、前端编码/");
 const fs = require("fs");
-const router = express.Router();
-router.get("/", "utf-8", () => {
-  fs.readFile("", (err, res) => {});
+const path = require("path");
+const home = express.Router();
+
+home.get("/", (err, reslove) => {
+  let home = fs.readFileSync(
+    path.resolve(__dirname, "../../dist/index.html"),
+    "utf-8"
+  );
+  reslove.send(home);
 });
+module.exports = home;
