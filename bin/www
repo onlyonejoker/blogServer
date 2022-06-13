@@ -1,0 +1,2 @@
+console.log(process.env.PORT);
+//var port = normalizePort(process.env.PORT || "50");

@@ -1,6 +1,17 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/blog");
+
+const Schema = mongoose.Schema;
+
+const 多啦A梦Schema = new Schema({ name: String, role: String }); //创建模型
+const 多啦A梦Model = mongoose.model("多啦A梦", 多啦A梦Schema); //创建模型实例
+
+const 多啦A梦 = new 多啦A梦Model({ name: "多啦A梦", role: "也比大熊" });
+
+多啦A梦.save().then(() => console.log("123"));
 
 //配置跨域;
 app.all("*", (req, res, next) => {
