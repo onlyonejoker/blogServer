@@ -9,7 +9,7 @@
 
 #### 安装教程
 
-1.  git clone https://gitee.com/dexie/blogServer.git 
+1.  git clone https://github.com/onlyonejoker/blogServer.git
 2.  cd blogServer
 3.  npm install
 4.  node app.js
