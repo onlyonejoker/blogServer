@@ -1,6 +1,8 @@
 const home = require("./home");
 const login = require("./login");
-module.exports = {
-  home,
-  login,
+let api = { home, login };
+module.exports = function (app) {
+  for (const key in api) {
+    app.use(api[key]);
+  }
 };
